@@ -2,7 +2,7 @@ Using pre-set license
 Built from '6000.1/staging' branch; Version is '6000.1.5f1 (923722cbbcfc) revision 9582370'; Using compiler version '194234433'; Build Type 'Release'
 OS: 'Windows 11  (10.0.26200) 64bit CoreSingleLanguage' Language: 'en' Physical Memory: 16167 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
-Date: 2025-11-02T14:27:15Z
+Date: 2025-11-08T06:52:25Z
 
 COMMAND LINE ARGUMENTS:
 C:\Program Files\Unity\Hub\Editor\6000.1.5f1\Editor\Unity.exe
@@ -16,7 +16,7 @@ C:/Users/toikh/Documents/GitHub/3D-Environment-with-Procedural-Sound/Chunity
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-62294
+52735
 -job-worker-count
 3
 -background-job-worker-count
@@ -62,12 +62,12 @@ C:/Users/toikh/Documents/GitHub/3D-Environment-with-Procedural-Sound/Chunity
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [28668]  Target information:
+Player connection [23504]  Target information:
 
-Player connection [28668]  * "[IP] 192.168.1.6 [Port] 0 [Flags] 2 [Guid] 1771493929 [EditorId] 1771493929 [Version] 1048832 [Id] WindowsEditor(7,LinhHoangNguyen) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [23504]  * "[IP] 192.168.8.64 [Port] 0 [Flags] 2 [Guid] 1736322893 [EditorId] 1736322893 [Version] 1048832 [Id] WindowsEditor(7,LinhHoangNguyen) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [28668] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [28668] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [23504] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [23504] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 3
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
@@ -79,8 +79,8 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 25.56 ms, found 4 plugins.
-Preloading 1 native plugins for Editor in 1550.96 ms.
+Refreshing native plugins compatible for Editor in 34.22 ms, found 4 plugins.
+Preloading 1 native plugins for Editor in 1379.72 ms.
 Initialize engine version: 6000.1.5f1 (923722cbbcfc)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.1.5f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path C:/Users/toikh/Documents/GitHub/3D-Environment-with-Procedural-Sound/Chunity/Assets
@@ -96,43 +96,43 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.1.5f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.1.5f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.1.5f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56932
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56792
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.1.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002567 seconds.
-- Loaded All Assemblies, in  0.505 seconds
+Registered in 0.001707 seconds.
+- Loaded All Assemblies, in  0.460 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.072 seconds
-Domain Reload Profiling: 1573ms
-	BeginReloadAssembly (120ms)
+- Finished resetting the current domain, in  0.418 seconds
+Domain Reload Profiling: 876ms
+	BeginReloadAssembly (157ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (55ms)
-	RebuildNativeTypeToScriptingClass (15ms)
-	initialDomainReloadingComplete (67ms)
-	LoadAllAssembliesAndSetupDomain (243ms)
-		LoadAssemblies (116ms)
+	RebuildCommonClasses (41ms)
+	RebuildNativeTypeToScriptingClass (16ms)
+	initialDomainReloadingComplete (56ms)
+	LoadAllAssembliesAndSetupDomain (187ms)
+		LoadAssemblies (153ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (240ms)
-			TypeCache.Refresh (238ms)
-				TypeCache.ScanAssembly (215ms)
-			BuildScriptInfoCaches (0ms)
+		AnalyzeDomain (184ms)
+			TypeCache.Refresh (181ms)
+				TypeCache.ScanAssembly (167ms)
+			BuildScriptInfoCaches (1ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (1072ms)
+	FinalizeReload (419ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (986ms)
+		SetupLoadedEditorAssemblies (363ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (87ms)
-			SetLoadedEditorAssemblies (7ms)
-			BeforeProcessingInitializeOnLoad (126ms)
-			ProcessInitializeOnLoadAttributes (652ms)
-			ProcessInitializeOnLoadMethodAttributes (113ms)
+			InitializePlatformSupportModulesInManaged (57ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (76ms)
+			ProcessInitializeOnLoadAttributes (156ms)
+			ProcessInitializeOnLoadMethodAttributes (69ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -141,152 +141,48 @@ Domain Reload Profiling: 1573ms
 Worker process is ready to serve import requests
 Import Worker Mode flag is 0x00
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.917 seconds
-Refreshing native plugins compatible for Editor in 35.07 ms, found 4 plugins.
+- Loaded All Assemblies, in  0.932 seconds
+Refreshing native plugins compatible for Editor in 25.70 ms, found 4 plugins.
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.894 seconds
-Domain Reload Profiling: 1804ms
-	BeginReloadAssembly (193ms)
+- Finished resetting the current domain, in  0.913 seconds
+Domain Reload Profiling: 1838ms
+	BeginReloadAssembly (167ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (10ms)
+		DisableScriptedObjects (6ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (46ms)
-	RebuildCommonClasses (52ms)
-	RebuildNativeTypeToScriptingClass (14ms)
-	initialDomainReloadingComplete (48ms)
-	LoadAllAssembliesAndSetupDomain (603ms)
-		LoadAssemblies (413ms)
+		CreateAndSetChildDomain (38ms)
+	RebuildCommonClasses (42ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (47ms)
+	LoadAllAssembliesAndSetupDomain (654ms)
+		LoadAssemblies (434ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (277ms)
-			TypeCache.Refresh (208ms)
-				TypeCache.ScanAssembly (192ms)
-			BuildScriptInfoCaches (53ms)
-			ResolveRequiredComponents (12ms)
-	FinalizeReload (894ms)
+		AnalyzeDomain (297ms)
+			TypeCache.Refresh (218ms)
+				TypeCache.ScanAssembly (200ms)
+			BuildScriptInfoCaches (62ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (913ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (662ms)
+		SetupLoadedEditorAssemblies (669ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (2ms)
-			SetLoadedEditorAssemblies (4ms)
-			BeforeProcessingInitializeOnLoad (149ms)
-			ProcessInitializeOnLoadAttributes (444ms)
-			ProcessInitializeOnLoadMethodAttributes (58ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (151ms)
+			ProcessInitializeOnLoadAttributes (442ms)
+			ProcessInitializeOnLoadMethodAttributes (63ms)
 			AfterProcessingInitializeOnLoad (5ms)
-			EditorAssembliesLoaded (0ms)
+			EditorAssembliesLoaded (1ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (7ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
-Refreshing native plugins compatible for Editor in 30.09 ms, found 4 plugins.
-Preloading 1 native plugins for Editor in 0.09 ms.
+		AwakeInstancesAfterBackupRestoration (10ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
+Refreshing native plugins compatible for Editor in 23.50 ms, found 4 plugins.
+Preloading 1 native plugins for Editor in 0.11 ms.
 Unloading 216 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6264 unused Assets / (4.3 MB). Loaded Objects now: 6842.
-Memory consumption went from 162.6 MB to 158.3 MB.
-Total: 8.322500 ms (FindLiveObjects: 0.628400 ms CreateObjectMapping: 0.674300 ms MarkObjects: 4.476300 ms  DeleteObjects: 2.541000 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 83087.457526 seconds.
-  path: Assets
-  artifactKey: Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets using Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c391582d739b6e62a5220f35cbb167ac') in 0.0096496 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 13.970024 seconds.
-  path: Assets/Environment_assets
-  artifactKey: Guid(6c35d2970fc70454c9e293c52c2b00ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Environment_assets using Guid(6c35d2970fc70454c9e293c52c2b00ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '63f6e4068cb0b4f5b62704049e39ca01') in 0.0006869 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 32.450931 seconds.
-  path: Assets/Environment_assets/qwantani_dusk_2_puresky_4k.exr
-  artifactKey: Guid(4eb1311f2e52a7e4f9a6ac1a02e35539) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Environment_assets/qwantani_dusk_2_puresky_4k.exr using Guid(4eb1311f2e52a7e4f9a6ac1a02e35539) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '93f2ffe5790df555c5fd837be8b5ebd9') in 0.0945289 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 12.118220 seconds.
-  path: Assets/Environment_assets/New Material.mat
-  artifactKey: Guid(84c5d0436fe4ac04ea963f9f0fd7538e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Environment_assets/New Material.mat using Guid(84c5d0436fe4ac04ea963f9f0fd7538e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c41dad72b53e326a18cd7d42b7708ec2') in 0.4792906 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 13.875150 seconds.
-  path: Assets/Environment_assets/SkyBoc.mat
-  artifactKey: Guid(84c5d0436fe4ac04ea963f9f0fd7538e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Environment_assets/SkyBoc.mat using Guid(84c5d0436fe4ac04ea963f9f0fd7538e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f84838a0fb4f87d26d93f3cab9f11a52') in 0.1340947 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.888966 seconds.
-  path: Assets/Environment_assets/SkyBox.mat
-  artifactKey: Guid(84c5d0436fe4ac04ea963f9f0fd7538e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Environment_assets/SkyBox.mat using Guid(84c5d0436fe4ac04ea963f9f0fd7538e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1323bd6b425c25528ae796d51bd95045') in 0.0264425 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 59.083901 seconds.
-  path: Assets/Environment_assets/qwantani_dusk_2_puresky_4k.exr
-  artifactKey: Guid(4eb1311f2e52a7e4f9a6ac1a02e35539) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Environment_assets/qwantani_dusk_2_puresky_4k.exr using Guid(4eb1311f2e52a7e4f9a6ac1a02e35539) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '82874620a4e8e3e3b45fe940a5aa567d') in 0.1353761 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 266.610431 seconds.
-  path: Assets/Environment_assets/rogland_clear_night_4k.exr
-  artifactKey: Guid(3be15d1c1b27d974094494291e3facdf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Environment_assets/rogland_clear_night_4k.exr using Guid(3be15d1c1b27d974094494291e3facdf) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1fc03912a94c11849550a974d0153c7a') in 0.0386264 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 36.936918 seconds.
-  path: Assets/Environment_assets/rogland_clear_night_4k.exr
-  artifactKey: Guid(3be15d1c1b27d974094494291e3facdf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Environment_assets/rogland_clear_night_4k.exr using Guid(3be15d1c1b27d974094494291e3facdf) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd690abe89f4f6d98910388886aabef8d') in 0.1232748 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.640688 seconds.
-  path: Assets/Environment_assets/SkyBox.mat
-  artifactKey: Guid(84c5d0436fe4ac04ea963f9f0fd7538e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Environment_assets/SkyBox.mat using Guid(84c5d0436fe4ac04ea963f9f0fd7538e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '10806669f5ad0ebd7bea344e94ccc240') in 0.1674798 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 143.905300 seconds.
-  path: Assets/MyMaterial/ShillaBuddha.mat
-  artifactKey: Guid(e99e792dd1a3efe468b9a705cbcb4da7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MyMaterial/ShillaBuddha.mat using Guid(e99e792dd1a3efe468b9a705cbcb4da7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3e42a9f1b235d3cc013ab98d8ddbcf10') in 4.6863328 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
-
-========================================================================
-Received Import Request.
-  Time since last request: 2049.326263 seconds.
-  path: Assets/Environment_assets/radio_material/radio_radzioo_Normal.png
-  artifactKey: Guid(3f2c54174afe5bb4da04b7c5c6a14d97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Environment_assets/radio_material/radio_radzioo_Normal.png using Guid(3f2c54174afe5bb4da04b7c5c6a14d97) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'df1834d5cf2d7c0e8010bd83927010f5') in 0.0665478 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 428.401792 seconds.
-  path: Assets/Environment_assets/radio_material.mat
-  artifactKey: Guid(737cd7d40a3edfb4995276560c60d0fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Environment_assets/radio_material.mat using Guid(737cd7d40a3edfb4995276560c60d0fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6c989b059baf510122047afbb5eef9f9') in 4.0656256 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
+Unloading 6264 unused Assets / (4.6 MB). Loaded Objects now: 6844.
+Memory consumption went from 162.7 MB to 158.1 MB.
+Total: 11.706200 ms (FindLiveObjects: 0.712300 ms CreateObjectMapping: 0.661400 ms MarkObjects: 6.546500 ms  DeleteObjects: 3.784300 ms)
 
