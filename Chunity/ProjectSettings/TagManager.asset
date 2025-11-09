@@ -4,26 +4,10 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - E
-  - C
-  - C+
-  - D
-  - G+
-  - G
-  - D+
-  - A
-  - E+
-  - F+
-  - F
-  - B
-  - Kick
-  - Snare
-  - HiHat
-  - Tom1
-  - Tom2
-  - FloorTom
-  - Crash
-  - Ride
+  - bell
+  - woodenfish
+  - speaker
+  - birb
   layers:
   - Default
   - TransparentFX
