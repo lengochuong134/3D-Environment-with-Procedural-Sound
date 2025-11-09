@@ -70,7 +70,9 @@
     <Compile Include="Assets\Scripts\PickupAudio.cs" />
     <Compile Include="Assets\Chunity\Scripts\Examples\ChunityExampleGlobalEventWithHelperComponents.cs" />
     <Compile Include="Assets\Chunity\Scripts\Examples\ChunityExamplePrintStatements.cs" />
+    <Compile Include="Assets\Scripts\WindController.cs" />
     <Compile Include="Assets\Scripts\Rotator.cs" />
+    <Compile Include="Assets\Scripts\LargeBellController.cs" />
     <Compile Include="Assets\Chunity\Scripts\DemoScene\ChunityDemo.cs" />
     <Compile Include="Assets\Chunity\Scripts\DemoScene\ChunityDemoSwitcher.cs" />
     <Compile Include="Assets\Scripts\ChunityRunCode.cs" />
@@ -79,6 +81,7 @@
     <Compile Include="Assets\Chunity\Scripts\Examples\ChunityExampleTimeAdvancerWithHelperComponents.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Chunity\Scripts\Examples\ChunityExampleRunFromFile.cs" />
+    <Compile Include="Assets\Scripts\WaterController.cs" />
     <Compile Include="Assets\Chunity\Scripts\Examples\ChunityExampleEditParameterWhileRunning.cs" />
     <Compile Include="Assets\Chunity\Scripts\Utility\ChuckFloatSyncer.cs" />
     <Compile Include="Assets\Chunity\Scripts\DemoScene\ChunityDemoDescription.cs" />
