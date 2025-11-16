@@ -2,14 +2,16 @@ using UnityEngine;
 
 public class Drum : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private Animator animator;
+    private ChuckSubInstance chuck;
+
     void Start()
     {
-        
+        animator = GetComponent<Animator>();
+        chuck = GetComponent<ChuckSubInstance>();
     }
 
-    // Update is called once per frame
-   void Update()
+    void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
@@ -18,65 +20,59 @@ public class Drum : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit))
             {
-                Debug.Log("Clicked on: " + hit.collider.tag);
-                GenerateSound(hit.collider);
+                if (hit.collider.tag == "woodenfish")
+                {
+                    Debug.Log("Clicked on: " + hit.collider.tag);
 
+                    // Trigger animation ngay khi click
+                    animator.SetTrigger("PlayAnim");
+
+                    // Phát âm thanh sau 1 giây
+                    Invoke(nameof(PlaySound), 1f);
+                }
             }
         }
     }
 
-
-public void GenerateSound(Collider hit)
-{
-    float freq = 0;
-
-    switch (hit.tag)
+    void PlaySound()
     {
-        case "woodenfish": freq = 500.0f; break; // mõ thường tầm này
+        // Ví dụ phát âm thanh cho "woodenfish"
+        float freq = 500f;
+
+        if (chuck != null)
+        {
+            chuck.RunCode($@"
+                [1.0, 1.3, 2.1] @=> float partials[];
+                [1.0, 0.4, 0.2] @=> float gains[];
+
+                Gain mix => JCRev reverb => dac;
+                0.15 => reverb.mix;
+
+                {freq} => float baseFreq;
+
+                for (0 => int i; i < partials.size(); i++)
+                {{
+                    SinOsc s => mix;
+                    baseFreq * partials[i] => s.freq;
+                    gains[i] * 0.8 => s.gain;
+                }}
+
+                Noise n => OnePole p => mix;
+                0.02 => n.gain;
+                0.9 => p.pole;
+
+                10::ms => dur attack;
+                300::ms => dur decay;
+                now => time start;
+                while (now - start < decay)
+                {{
+                    Math.exp(-8.0 * (now - start) / decay) => mix.gain;
+                    5::ms => now;
+                }}
+
+                0 => mix.gain;
+                0.1::second => now;
+            ");
+        }
     }
-
-    if (freq > 0)
-    {
-        GetComponent<ChuckSubInstance>().RunCode($@"
-            // --- Wooden Fish Drum synthesis ---
-            // Mô phỏng âm mõ: ngắn, khô, hơi cộng hưởng gỗ
-
-            [1.0, 1.3, 2.1] @=> float partials[];   // cộng hưởng lệch nhẹ
-            [1.0, 0.4, 0.2] @=> float gains[];      // partial cao yếu hơn
-
-            Gain mix => JCRev reverb => dac;
-            0.15 => reverb.mix; // reverb nhẹ thôi, vì mõ không vang lâu
-
-            {freq} => float baseFreq;
-
-            for (0 => int i; i < partials.size(); i++)
-            {{
-                SinOsc s => mix;
-                baseFreq * partials[i] => s.freq;
-                gains[i] * 0.8 => s.gain;
-            }}
-
-            // Thêm một noise nhẹ để mô phỏng va chạm gỗ
-            Noise n => OnePole p => mix;
-            0.02 => n.gain;
-            0.9 => p.pole;
-
-            // Envelope nhanh kiểu “cốc”
-            10::ms => dur attack;
-            300::ms => dur decay;
-            now => time start;
-            while (now - start < decay)
-            {{
-                // exponential decay nhanh
-                Math.exp(-8.0 * (now - start) / decay) => mix.gain;
-                5::ms => now;
-            }}
-
-            // cleanup
-            0 => mix.gain;
-            0.1::second => now;
-        ");
-    }
-}
-
 }
