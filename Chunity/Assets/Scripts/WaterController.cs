@@ -18,7 +18,7 @@ public class WaterController : MonoBehaviour
         string code = @"
             // Temple stream: gentle flowing water
             Noise n => Gain mix => dac;
-            0.35 => mix.gain;
+            0.5 => mix.gain;
 
             // several moving bandpass filters to create 'bubbles'
             for (0 => int i; i < 4; i++)
@@ -27,7 +27,7 @@ public class WaterController : MonoBehaviour
                 n => bp;
                 (800 + i*600) => bp.freq;
                 2.5 => bp.Q;
-                (0.12 - 0.02*i) => g.gain;
+                (0.4 - 0.03*i) => g.gain;
 
                 spork ~ modulate(bp, g);
             }

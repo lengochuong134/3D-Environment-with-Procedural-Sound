@@ -58,7 +58,7 @@ public class Drum : MonoBehaviour
                 }}
 
                 Noise n => OnePole p => mix;
-                0.02 => n.gain;
+                0.05 => n.gain;
                 0.9 => p.pole;
 
                 10::ms => dur attack;
@@ -66,7 +66,7 @@ public class Drum : MonoBehaviour
                 now => time start;
                 while (now - start < decay)
                 {{
-                    Math.exp(-8.0 * (now - start) / decay) => mix.gain;
+                    Math.exp(-8.0 * (now - start) / decay) *2.5 => mix.gain;
                     5::ms => now;
                 }}
 

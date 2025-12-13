@@ -16,10 +16,7 @@ public class Speaker : MonoBehaviour
                 {
                     PlayZenMusic();
                 }
-                else if (hit.collider.CompareTag("birb"))
-                {
-                    Birb();
-                }
+
             }
         }
     }
@@ -74,62 +71,6 @@ public class Speaker : MonoBehaviour
 
     }
 
-    public void Birb()
-    {
-        ChuckSubInstance chuck = GetComponent<ChuckSubInstance>();
-        if (chuck == null)
-        {
-            Debug.LogWarning("ChuckSubInstance missing! Add it to the same object.");
-            return;
-        }
 
-        chuck.RunCode(@"
-Gain master => JCRev reverb => dac;
-0.6 => reverb.mix;
-0.6 => master.gain;
-
-// Chim chính
-SinOsc bird => master;
-0 => bird.gain;
-
-// White noise để tạo chút rung lắc
-Noise n => LPF f => master;
-2000 => f.freq;
-0 => n.gain;
-
-time start;
-now => start;
-
-// Chạy 10 giây
-while (now - start < 10::second)
-{
-    // Ngẫu nhiên khoảng cách giữa các tiếng
-    Math.random2f(0.3, 1.0)::second => now;
-
-    // Chọn tần số note ngẫu nhiên (cao, sáng)
-    [1200, 1400, 1600, 1800, 2000] @=> int notes[];
-    notes[Math.random2(0, notes.cap()-1)] => bird.freq;
-
-    // Envelope chim
-    0.3 => bird.gain;
-    0.05::second => now;
-    0.2 => bird.gain;
-    0.07::second => now;
-    0.0 => bird.gain;
-
-    // Noise rung lắc
-    0.05 => n.gain;
-    0.07::second => now;
-    0 => n.gain;
-}
-
-// fade out
-for (0 => int i; i < 20; i++) {
-    master.gain() * 0.9 => master.gain;
-    100::ms => now;
-}
-0 => master.gain;
-");
-    }
 
 }
