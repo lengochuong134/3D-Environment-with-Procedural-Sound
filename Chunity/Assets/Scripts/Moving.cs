@@ -9,6 +9,7 @@ public class HandData
     public float[] thumb;
     public float[] index;
     public float pinch;
+    public bool click;
 }
 
 public class Moving : MonoBehaviour

@@ -10,6 +10,7 @@ hands = mp_hands.Hands(min_detection_confidence=0.7, min_tracking_confidence=0.7
 host, port = "127.0.0.1", 65433 
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
+
 cap = cv2.VideoCapture(0)
 
 while True:
@@ -42,7 +43,7 @@ while True:
         data = {
             "thumb": [thumb.x, thumb.y],
             "index": [index.x, index.y],
-            "pinch": pinch_dist
+            "pinch": pinch_dist,
         }
         sock.sendto(json.dumps(data).encode(), (host, port))
 
